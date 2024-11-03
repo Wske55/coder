@@ -57,7 +57,7 @@ fun HomeScreen(navController: NavController,viewModule: HomeViewModule = koinVie
         mutableStateOf<List<Product>>(emptyList())
     }
     val categories = remember {
-        mutableStateOf<List<Product>>(emptyList())
+        mutableStateOf<List<String>>(emptyList())
     }
 
     Scaffold {
@@ -143,7 +143,7 @@ fun ProfileHeader(){
 fun HomeContent (
     featured: List<Product>,
     popularProducts: List<Product>,
-    categories: List<Product>,
+    categories: List<String>,
     isLoading:Boolean = false,
     errorMsg: String? = null
     ){

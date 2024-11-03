@@ -4,5 +4,5 @@ import com.codep.domain.model.Product
 import com.codep.domain.network.ResultWrapper
 
 interface ProductRepository {
-   suspend fun getProducts(category:String?): ResultWrapper<List<Product>>
+   suspend fun getProducts(category:Int?): ResultWrapper<List<Product>>
 }

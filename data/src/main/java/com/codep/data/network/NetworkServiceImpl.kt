@@ -36,8 +36,8 @@ import io.ktor.util.InternalAPI
 import io.ktor.utils.io.errors.IOException
 
 class NetworkServiceImpl (val client:HttpClient) : NetworkService {
-   private val baseUrl = "https://fakestoreapi.com"
-    override suspend fun getProducts(category:String?): ResultWrapper<List<Product>> {
+   private val baseUrl = "https://ecommerce-ktor-4641e7ff1b63.herokuapp.com"
+    override suspend fun getProducts(category:Int?): ResultWrapper<List<Product>> {
         val url =
             if(category != null )  "$baseUrl/products/category/$category" else "$baseUrl/products"
 
